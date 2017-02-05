@@ -4,10 +4,10 @@ cambiar contraseña DB si es nesesario, por defecto esta vacio('') usando xampp
 git clone 'url'
 
 **configuacion (solo por primera ves de uso)**<br>
-'''sh
+```sh
 git config --global user.email "correo@gmail.com"
 git config --global user.name "username"
-'''
+```
 #============resumen=============<br>
 - subir cambios a github:<br>
 git add . <br> 
