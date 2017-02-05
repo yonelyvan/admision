@@ -1,24 +1,24 @@
 # proyecto admision
 cambiar contraseña DB si es nesesario, por defecto esta vacio('') usando xampp
-#clonar repositorio (unica vez)
+**clonar repositorio (unica vez)**<br>
 git clone 'url'
 
-#configuacion (solo por primera ves de uso)
-git config --global user.email "correo@gmail.com" <br>
+**configuacion (solo por primera ves de uso)**<br>
+'''sh
+git config --global user.email "correo@gmail.com"
 git config --global user.name "username"
-
-============resumen=============<br>
-#subir cambios a github:
+'''
+#============resumen=============<br>
+- subir cambios a github:<br>
 git add . <br> 
 git commit -m "Commit message" <br>
 git pull <br>
 git push origin master<br>
-
-#actualizar mi repositorio local para modificar aumentar o eliminar codigo
+- actualizar mi repositorio local para modificar aumentar o eliminar codigo<br>
 git pull
 
 
-========= uso frecuente explicacion del resumen ==========<br> 
+#========= uso frecuente explicacion del resumen ==========<br> 
 #git add . 
 agregar todos los archivos modificados o creados a nuestro repositorio local el '.' indica todos lo archivos.
 
