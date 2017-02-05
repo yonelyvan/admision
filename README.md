@@ -8,7 +8,7 @@ git clone 'url'
 git config --global user.email "correo@gmail.com"
 git config --global user.name "username"
 ```
-#============resumen=============<br>
+#============resumen=============
 - subir cambios a github:
 ```sh
 git add . 
@@ -20,9 +20,12 @@ git push origin master
 ```sh
 git pull
 ```
+#=================================
 
-#========= uso frecuente explicacion del resumen ==========<br> 
-#git add . 
+#uso frecuente explicacion del resumen 
+```sh 
+git add . 
+``` 
 agregar todos los archivos modificados o creados a nuestro repositorio local el '.' indica todos lo archivos.
 
 #git commit -m "Commit message" 
