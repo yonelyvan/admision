@@ -4,7 +4,7 @@ cambiar contraseña DB si es nesesario, por defecto esta vacio('') usando xampp
 ```sh
 git clone 'url'
 ```
-**configuacion (solo por primera ves de uso)**<br>
+**configuacion (solo por primera vez de uso)**<br>
 ```sh
 git config --global user.email "correo@gmail.com"
 git config --global user.name "username"
@@ -20,6 +20,10 @@ git push origin master
 - actualizar mi repositorio local para modificar aumentar o eliminar codigo
 ```sh
 git pull
+```
+- ver estado de git, se puede ejecutar en cualquier momento
+```sh
+git status
 ```
 #=================================
 
