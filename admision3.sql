@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 27-01-2017 a las 05:05:17
+-- Tiempo de generación: 05-02-2017 a las 04:19:49
 -- Versión del servidor: 10.1.19-MariaDB
--- Versión de PHP: 5.6.28
+-- Versión de PHP: 5.5.38
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -27,9 +27,9 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `area` (
-  `id` int(11) NOT NULL,
-  `nombre` varchar(50) NOT NULL,
-  `descripcion` varchar(100) NOT NULL
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `nombre` varchar(128) DEFAULT '',
+  `descripcion` varchar(128) DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -215,11 +215,11 @@ CREATE TABLE `proceso_personal` (
 --
 
 CREATE TABLE `usuarios` (
-  `id` int(11) NOT NULL,
-  `nom` varchar(255) NOT NULL,
-  `usu` varchar(255) NOT NULL,
-  `con` varchar(255) NOT NULL,
-  `tipo` varchar(255) NOT NULL
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `nom` varchar(128) DEFAULT '',
+  `usu` varchar(128) NOT NULL,
+  `con` varchar(128) NOT NULL,
+  `tipo` varchar(128) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -227,7 +227,8 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `nom`, `usu`, `con`, `tipo`) VALUES
-(1, 'Hayde Luzmila', 'admin', 'admin', 'a');
+(1, 'Hayde Luzmila', 'admin', 'admin', 'a'),
+(2, 'YONEL MAMANI', 'yonel', 'root', 'a');
 
 --
 -- Índices para tablas volcadas
@@ -307,7 +308,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `area`
 --
 ALTER TABLE `area`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT de la tabla `aula`
 --
@@ -352,7 +353,7 @@ ALTER TABLE `proceso_personal`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
