@@ -9,14 +9,17 @@ git config --global user.email "correo@gmail.com"
 git config --global user.name "username"
 ```
 #============resumen=============<br>
-- subir cambios a github:<br>
-git add . <br> 
-git commit -m "Commit message" <br>
-git pull <br>
-git push origin master<br>
-- actualizar mi repositorio local para modificar aumentar o eliminar codigo<br>
+- subir cambios a github:
+```sh
+git add . 
+git commit -m "Commit message"
 git pull
-
+git push origin master
+```
+- actualizar mi repositorio local para modificar aumentar o eliminar codigo
+```sh
+git pull
+```
 
 #========= uso frecuente explicacion del resumen ==========<br> 
 #git add . 
