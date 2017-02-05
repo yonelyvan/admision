@@ -1,5 +1,5 @@
 # proyecto admision
-cambiar contraseña DB si es nesesario, por defecto esta vacio('') usando xampp
+cambiar contraseña DB si es nesesario, por defecto esta vacio('') usando xampp<br>
 **clonar repositorio (unica vez)**<br>
 ```sh
 git clone 'url'
