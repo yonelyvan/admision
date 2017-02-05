@@ -1,8 +1,9 @@
 # proyecto admision
 cambiar contraseña DB si es nesesario, por defecto esta vacio('') usando xampp
 **clonar repositorio (unica vez)**<br>
+```sh
 git clone 'url'
-
+```
 **configuacion (solo por primera ves de uso)**<br>
 ```sh
 git config --global user.email "correo@gmail.com"
