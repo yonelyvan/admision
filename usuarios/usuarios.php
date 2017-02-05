@@ -92,7 +92,7 @@
 			?>
             <table class="table table-bordered">
             	<tr class="success">
-                    <td><strong>Documento</strong></td>
+                    <!--<td><strong>Documento</strong></td>-->
                     <td><strong>Nombre</strong></td>
                     <td><strong>Usuario</strong></td>
                     <td><strong><center>Estado</center></strong></td>
@@ -109,7 +109,7 @@
 						}
 				?>
                 <tr>
-                    <td><?php echo $row['id']; ?></td>
+                    <!--<td><?php echo $row['id']; ?></td> -->
                     <td><?php echo $row['nom']; ?></td>
                     <td><?php echo $row['usu']; ?></td>
                     <td><center><?php echo estado($row['estado']); ?></center></td>
@@ -131,7 +131,7 @@
                     </div>
                     <div class="modal-body" align="center">
                     	<input type="hidden" name="proceso" value="actualizar">
-                        <strong>Documento</strong><br>
+                        <strong>Documento</strong><br> 
                         <input type="text" name="ced" autocomplete="off" readonly class="input-large" value="<?php echo $row['ced']; ?>"><br>
                         <strong>Nombre Completo</strong><br>
                         <input type="text" name="nom" autocomplete="off" required class="input-large" value="<?php echo $row['nom']; ?>"><br>
@@ -162,35 +162,52 @@
     </table>
     
     <div id="nuevo" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    	<form name="fo" action="" method="post">
+    	
+        
+
+        <form name="fo" action="insert.php" method="post">
         <div class="modal-header">
+
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
             <h3 id="myModalLabel">Crear Usuario</h3>
         </div>
         <div class="modal-body">
         	<input type="hidden" name="proceso" value="guardar">
+            <!--
             <strong>Documento</strong><br>
             <input type="text" name="ced" autocomplete="off" required class="input-large" value=""><br>
-            <strong>Nombre Completo</strong><br>
-            <input type="text" name="nom" autocomplete="off" required class="input-large" value=""><br>
-            <strong>Usuario</strong><br>
-            <input type="text" name="usu" autocomplete="off" required class="input-large" value=""><br>
-            <strong>Estado</strong><br>
-            <select name="estado" class="input-large">
-            	<option value="s">Activo</option>
+            -->
+            
+            <input type="text" name="usuario[nombre]" placeholder="Nombre Completo" autocomplete="off" required class="input-large" value=""><br>
+
+            <input type="text" name="usuario[usuario]" placeholder="Usuario" autocomplete="off" required class="input-large" value=""><br>
+
+            
+
+            <input type="password" name="usuario[password]" placeholder="Contraseña" autocomplete="off" required class="input-large" value=""><br>
+
+            
+            <input type="password" name="usuario[password2]" placeholder="Confirmar Contraseña" autocomplete="off" required class="input-large" value="">
+            
+            <label>Estado</label>
+            <select name="usuario[estado]" class="input-large">
+                <option value="s">Activo</option>
                 <option value="n">No Activo</option>
-            </select><br>
-            <strong>Tipo de Usuario</strong><br>
-            <select name="tipo" class="input-large">
+            </select>
+
+            <label>Tipo de Usuario</label>
+            <select name="usuario[tipo]" class="input-large">
             	<option value="a">Administrador</option>
                 <option value="u">Usuario</option>
-            </select><br>
+            </select>
         </div>
         <div class="modal-footer">
             <button class="btn" data-dismiss="modal" aria-hidden="true"><strong>Cerrar</strong></button>
             <button type="submit" class="btn btn-primary"><strong>Crear Usuario</strong></button>
         </div>
         </form>
+
+
     </div>
 </div>
 </body>

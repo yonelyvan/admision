@@ -108,7 +108,7 @@ body {
           </ul>
           <ul class="nav pull-right">
             <li id="fat-menu" class="dropdown">
-              <a href="#" id="drop3" role="button" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user"></i> Bienvenido <?php echo $nomb; ?> <b class="caret"></b></a>
+              <a href="#" id="drop3" role="button" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user"></i> Bienvenido <?php echo $nombre=$dato['nom']; ?> <b class="caret"></b></a>
               <ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
                 <li role="presentation"><a role="menuitem" tabindex="-1" href="../usuarios/usuarios.php" target="admin"><i class="icon-user"></i> Crear Usuarios</a></li>
                 <li role="presentation"><a role="menuitem" tabindex="-1" href="../usuarios/cambiar_clave.php" target="admin"><i class="icon-refresh"></i> Cambiar Contraseña</a></li>
