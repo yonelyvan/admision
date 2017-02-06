@@ -42,3 +42,5 @@ tambien se usa despues de hace un 'git push' antes de hacer nuevas modificacione
 **git push origin master** <br>
 nuestro repositorio local indexado, con nuestros cambios y actualizado son guardados en github(nube) 
 
+# :D XD
+
