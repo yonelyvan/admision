@@ -179,14 +179,8 @@
             -->
             
             <input type="text" name="usuario[nombre]" placeholder="Nombre Completo" autocomplete="off" required class="input-large" value=""><br>
-
-            <input type="text" name="usuario[usuario]" placeholder="Usuario" autocomplete="off" required class="input-large" value=""><br>
-
-            
-
-            <input type="password" name="usuario[password]" placeholder="Contraseña" autocomplete="off" required class="input-large" value=""><br>
-
-            
+            <input type="text" name="usuario[usuario]" placeholder="Usuario" autocomplete="off" required class="input-large" value=""><br>          
+            <input type="password" name="usuario[password]" placeholder="Contraseña" autocomplete="off" required class="input-large" value=""><br>            
             <input type="password" name="usuario[password2]" placeholder="Confirmar Contraseña" autocomplete="off" required class="input-large" value="">
             
             <label>Estado</label>
@@ -206,7 +200,8 @@
             <button type="submit" class="btn btn-primary"><strong>Crear Usuario</strong></button>
         </div>
         </form>
-
+		
+		
 
     </div>
 </div>
