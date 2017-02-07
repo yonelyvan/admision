@@ -23,7 +23,8 @@
     <link href="../Recursos/css/bootstrap-responsive.css" rel="stylesheet">
     <link href="../Recursos/css/docs.css" rel="stylesheet">
     <link href="../Recursos/js/google-code-prettify/prettify.css" rel="stylesheet">
-    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    <link rel="stylesheet" href="../Recursos/font-awesome/css/font-awesome.min.css">
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>   
 	<script src="../Recursos/js/jquery.js"></script>
     <script src="../Recursos/js/bootstrap-transition.js"></script>
     <script src="../Recursos/js/bootstrap-alert.js"></script>
@@ -41,6 +42,7 @@
     <script src="../Recursos/js/holder/holder.js"></script>
     <script src="../Recursos/js/google-code-prettify/prettify.js"></script>
     <script src="../Recursos/js/application.js"></script>
+    
 
 
 
@@ -49,6 +51,8 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+    <!-- admision/ -->
+    
     <link rel="shortcut icon" href="assets/ico/favicon.png">
 
 </head>
@@ -92,10 +96,10 @@
 			?>
             <table class="table table-bordered">
             	<tr class="success">
-                    <!--<td><strong>Documento</strong></td>-->
+                    <td><strong>Documento</strong></td>
                     <td><strong>Nombre</strong></td>
                     <td><strong>Usuario</strong></td>
-                    <td><strong><center>Estado</center></strong></td>
+                    <!-- <td><strong><center>Estado</center></strong></td> -->
                     <td><strong><center>Tipo</center></strong></td>
                     <td><strong></strong></td>
               	</tr>
@@ -103,20 +107,23 @@
 					$sql=mysql_query("SELECT * FROM usuarios");
 					while($row=mysql_fetch_array($sql)){
 						if($row['tipo']=='a'){
-							$tipo='Administrado';
+							$tipo='Administrador';
 						}else{
 							$tipo='Usuario';	
 						}
 				?>
                 <tr>
-                    <!--<td><?php echo $row['id']; ?></td> -->
+                    <td><?php echo $row['id']; ?></td> 
                     <td><?php echo $row['nom']; ?></td>
                     <td><?php echo $row['usu']; ?></td>
-                    <td><center><?php echo estado($row['estado']); ?></center></td>
                     <td><center><?php echo $tipo; ?></center></td>
                     <td>
                     	<center>
-                        	<a href="#u<?php echo $row['usu']; ?>" role="button" class="btn btn-mini" data-toggle="modal">
+                        	<a href="#u
+                        		<?php 
+                        			echo "<i class='fa fa-user-times' aria-hidden='true'> $tipo </i>";
+                        		?>" 
+                        		role="button" class="btn btn-mini" data-toggle="modal">
                             	<i class="icon-edit"></i>
                             </a>
                         </center>
@@ -163,7 +170,17 @@
     
     <div id="nuevo" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     	
-        
+        <script language="JavaScript" type="text/JavaScript">
+        unction comprobarClave(){ 
+           	clave1 = document.f1.clave1.value 
+           	clave2 = document.f1.clave2.value 
+
+           	if (clave1 == clave2) 
+              	alert("Las dos claves son iguales...\nRealizaríamos las acciones del caso positivo") 
+           	else 
+              	alert("Las dos claves son distintas...\nRealizaríamos las acciones del caso negativo") 
+        } 
+	</script>
 
         <form name="fo" action="insert.php" method="post">
         <div class="modal-header">
@@ -182,13 +199,13 @@
             <input type="text" name="usuario[usuario]" placeholder="Usuario" autocomplete="off" required class="input-large" value=""><br>          
             <input type="password" name="usuario[password]" placeholder="Contraseña" autocomplete="off" required class="input-large" value=""><br>            
             <input type="password" name="usuario[password2]" placeholder="Confirmar Contraseña" autocomplete="off" required class="input-large" value="">
-            
+            <!--  
             <label>Estado</label>
             <select name="usuario[estado]" class="input-large">
                 <option value="s">Activo</option>
                 <option value="n">No Activo</option>
             </select>
-
+			-->
             <label>Tipo de Usuario</label>
             <select name="usuario[tipo]" class="input-large">
             	<option value="a">Administrador</option>
@@ -197,7 +214,7 @@
         </div>
         <div class="modal-footer">
             <button class="btn" data-dismiss="modal" aria-hidden="true"><strong>Cerrar</strong></button>
-            <button type="submit" class="btn btn-primary"><strong>Crear Usuario</strong></button>
+            <button type="submit" class="btn btn-primary" onClick="comprobarClave()" ><strong>Crear Usuario</strong></button>
         </div>
         </form>
 		
